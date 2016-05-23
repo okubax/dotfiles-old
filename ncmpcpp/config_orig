@@ -1,0 +1,114 @@
+lyrics_directory                            = ~/.ncmpcpp/lyrics
+ncmpcpp_directory                           = ~/.ncmpcpp
+mpd_host                                    = localhost
+mpd_port                                    = 6600
+mpd_music_dir                               = ~/music
+mpd_connection_timeout = "5"
+mpd_crossfade_time = "3"
+
+#visualizer_fifo_path = "/tmp/mpd.fifo"
+#visualizer_output_name = "My FIFO"
+visualizer_type = "wave" (wave/spectrum)
+visualizer_sync_interval = "100"
+visualizer_in_stereo = "yes"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_look = "▮▮"
+#visualizer_look = "||"
+#visualizer_color = "red,yellow,green,cyan,blue,red,yellow,green,cyan,blue,red,yellow,green,cyan,blue,red"
+message_delay_time = "4"
+seek_time = "4"
+playlist_disable_highlight_delay = "3"
+
+# Left Align Title - Artist | Right Align Album
+#song_list_format = "$9{$8 %a $1▶$4 %t}|{$5 %a $1▶$8 <untitled>}|{$8 <unknown artist> $1▶$4 %t}|{$8 %f} $1 $1$R{$8 %b} $9"
+
+# Left Align Artist - Title // CURRENT
+song_list_format = "$9{$8%a $1▶$7 %t}|{$8%a $1▶$7 <untitled>}|{$8<unknown artist> $1▶$7 %t}|{$1▶$8 %f} $9 $R{$1 %l}"
+
+# Right Align Title - Artist
+#song_list_format = "$9{$R$4 %t $1▶$8 %a}|{$R$8 <untitled> $1▶$8 %a}|{$R$4 %t $1▶$8 <unknown artist>} $9"
+
+# Left Align Title | Right Align Artist
+#song_list_format = "$9{$1▶$4 %t $9$R$8 %a}|{$1▶$4 <untitled> $9$R$8 %a}|{$1▶$4 %t $9$R$8 <unknown>}|{$1▶$8 %f} $9 "
+
+song_columns_list_format = "(4)[white]{n}(5)[white]{l}(20)[blue]{a}(30)[magenta]{t}(38)[white]{b}(4)[white]{y}"
+#song_status_format = "{(%l) }{%a - }{%t}"
+song_status_format = "{$8%t}{$8 \"%b\"}|{$8 \"%a\"}$8"
+song_library_format = "{%n - }{%t}|{%f}"
+#tag_editor_album_format = "{(%y) }%b"
+song_window_title_format = "{⮕ %a - %t}"
+browser_playlist_prefix = "$2playlist$9» "
+now_playing_prefix = "$b"
+now_playing_suffix = "$/b"
+alternative_header_first_line_format = "$8$aqqu$/a$b {%t}|{%f} $/b$8$atqq$/a$9"
+alternative_header_second_line_format = "{{$8%a}{$8 - %b$9}{$8 (%y)$8}}|{%D$9}"
+
+use_console_editor = "yes"
+external_editor = "/usr/bin/vim"
+default_tag_editor_pattern = "%n - %t"
+default_find_mode = "wrapped"
+default_space_mode = "add"
+default_place_to_search_in = "database"
+show_hidden_files_in_local_browser = "no"
+
+colors_enabled = "yes"
+mouse_support = "no"
+header_text_scrolling = "yes"
+cyclic_scrolling = "no"
+lines_scrolled = "2"
+
+user_interface = "classic"
+browser_display_mode = "columns"
+search_engine_display_mode = "columns"
+playlist_display_mode = "classic"
+playlist_show_remaining_time = "no"
+
+enable_window_title = "yes"
+header_visibility = "no"
+statusbar_visibility = "no"
+
+#progressbar_look = "─- "
+#progressbar_look = "▒▒░"
+#progressbar_look = "┅┅┄"
+#progressbar_look = "─⊙┄"
+#progressbar_look = "─➞─"
+#progressbar_look = "─┅─"
+progressbar_look = "───"
+#progressbar_look = "▁▁▁"
+#progressbar_look = "‒‒‒"
+#progressbar_look = "■◣ "
+#progressbar_look = "◈◆◇"
+
+autocenter_mode = "yes"
+incremental_seeking = "yes"
+jump_to_now_playing_song_at_start = "yes"
+
+clock_display_seconds = "yes"
+display_bitrate = "no"
+display_remaining_time = "no"
+
+follow_now_playing_lyrics = "no"
+ignore_leading_the = "no"
+block_search_constraints_change_if_items_found = "no"
+regular_expressions = "extended"
+display_volume_level = "yes"
+volume_change_step = "3"
+
+active_column_color = "white"
+active_window_border = "white"
+alternative_ui_separator_color = "black"
+empty_tag_marker = "<null>"
+empty_tag_color = "white"
+header_window_color = "white"
+main_window_color = "white"
+main_window_highlight_color = "black"
+progressbar_color = "black"
+progressbar_elapsed_color = "white"
+state_line_color = "black"
+state_flags_color = "white"
+statusbar_color = "white"
+volume_color = "white"
+#visualizer_color = "blue"
+color1 = "blue"
+color2 = "magenta"
+window_border_color = "white"

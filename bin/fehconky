@@ -1,0 +1,2 @@
+#!/bin/bash
+sleep 1 && feh --bg-scale ~/Pictures/walls/0_deeply.jpg &

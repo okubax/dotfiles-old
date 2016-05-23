@@ -1,0 +1,2 @@
+#!/bin/bash
+sleep 10 && conky -c /home/ajibola/.todo/conkyrc ;

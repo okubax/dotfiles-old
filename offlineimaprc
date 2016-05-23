@@ -1,0 +1,35 @@
+[general]
+accounts = Gmail
+maxsyncaccounts = 7
+pythonfile = ~/.offlineimap.py
+
+[Account Gmail]
+status_backend = sqlite
+localrepository = Gmail-Local
+remoterepository = Gmail-Remote
+autorefresh = 5
+quick = 10
+
+[Repository Gmail-Local]
+type = Maildir
+localfolders = ~/mail/Gmail
+
+[Repository Gmail-Remote]
+type = IMAP
+remotehost = imap.gmail.com
+remoteuser = you @ gmail.com
+remotepasseval = get_pass("Gmail")
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+keepalive = 120
+createfolders = False
+realdelete = no
+holdconnectionopen = true
+                               
+[mbnames]
+enabled = yes
+filename = ~/.mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
