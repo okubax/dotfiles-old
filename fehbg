@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --bg-fill '/home/ajibola/images/walls/spiral.png' 
+feh  --bg-fill '/home/ajibola/.wl/wall.png' 

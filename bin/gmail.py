@@ -2,8 +2,8 @@
 
 from urllib.request import FancyURLopener
 
-email = 'you@youremail.com'
-password  = 'yourpassword'
+email = ''
+password  = ''
 
 url = 'https://%s:%s@mail.google.com/mail/feed/atom' % (email, password)
 

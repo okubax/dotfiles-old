@@ -26,19 +26,19 @@ TEXT
   
   {"full_text":" ${execpi 60 pactl list sinks | grep "Volume: front-left" | cut -d " " -f6 }", "color":"\#a6a6a6"},\
   
-  ${if_existing /sys/class/power_supply/AC0/online 0}
-  {"full_text": "","color":"\"859900","separator":false,"separator_block_width":6},\
-  {"full_text": "${if_match ${battery_percent}<20}   ${battery_percent}%","color":"\#dc322f"},\
-  {"full_text":"${else}"},\
-  {"full_text":"${if_match ${battery_percent}<50}   ${battery_percent}%","color":"\#b58900"},\
-  {"full_text":"${else}"},\
-  {"full_text":"${if_match ${battery_percent}==100}   ${battery_percent}%","color":"\#a6a6a6"},\
-  {"full_text":"${else}"},\
-  {"full_text":"${if_match ${battery_percent}>80}   ${battery_percent}%","color":"\#a6a6a6"},\
-  {"full_text":"${else}"},\
-  {"full_text":"${if_match ${battery_percent}>=50}   ${battery_percent}%","color":"\#a6a6a6"},\
-  {"full_text":"${else}"},\
-  {"full_text":"${endif}${endif}${endif}${endif}${endif}"},\
+  #${if_existing /sys/class/power_supply/AC0/online 0}
+  #{"full_text": "","color":"\"859900","separator":false,"separator_block_width":6},\
+  #{"full_text": "${if_match ${battery_percent}<20}   ${battery_percent}%","color":"\#dc322f"},\
+  #{"full_text":"${else}"},\
+  #{"full_text":"${if_match ${battery_percent}<50}   ${battery_percent}%","color":"\#b58900"},\
+  #{"full_text":"${else}"},\
+  #{"full_text":"${if_match ${battery_percent}==100}   ${battery_percent}%","color":"\#a6a6a6"},\
+  #{"full_text":"${else}"},\
+  #{"full_text":"${if_match ${battery_percent}>80}   ${battery_percent}%","color":"\#a6a6a6"},\
+  #{"full_text":"${else}"},\
+  #{"full_text":"${if_match ${battery_percent}>=50}   ${battery_percent}%","color":"\#a6a6a6"},\
+  #{"full_text":"${else}"},\
+  #{"full_text":"${endif}${endif}${endif}${endif}${endif}"},\
   #${else}
   #{"full_text": " ? ${battery_percent}% ","color":"\#859900"},\
   #${endif}

@@ -1,2 +1,0 @@
-#!/bin/sh
-minidlnad -f /home/ajibola/.config/minidlna/minidlna.conf -P /home/ajibola/.config/minidlna/minidlna.pid

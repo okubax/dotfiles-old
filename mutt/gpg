@@ -85,3 +85,4 @@ set pgp_good_sign="^\\[GNUPG:\\] GOODSIG"
 
 # pattern to verify a decryption occurred
 set pgp_decryption_okay="^\\[GNUPG:\\] DECRYPTION_OKAY"
+

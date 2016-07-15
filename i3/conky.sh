@@ -11,3 +11,4 @@ echo '[],'
 
 # Now send blocks with information forever:
 conky -c $HOME/.i3/conky
+#conky -c $HOME/.i3/conky | iconv -t UTF-8

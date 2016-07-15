@@ -33,11 +33,11 @@ source ~/.mutt/colors/solarized-dark-16
 
 # }}}
 # Sidebar Patch {{{ 
-set sidebar_visible = yes 
+#set sidebar_visible = yes 
 # set sidebar_delim   = ' | '
-set sidebar_width   = 30 
+#set sidebar_width   = 30 
 # set sidebar_delim_chars = "./"
-color sidebar_new  yellow default
+#color sidebar_new  yellow default
 
 # }}}
 # Status Bar {{{ 
@@ -95,27 +95,6 @@ hdr_order from: to: cc: date: subject: # and in this order
 # Default inbox.
 set spoolfile = "+Gmail/INBOX"
 
-# Set account specific options on folder change
-folder-hook Gmail/*		source ~/.mutt/accounts/Gmail
-folder-hook Gmail2/*	source ~/.mutt/accounts/Gmail2
-
-# Mailboxes to show in the sidebar.
-mailboxes "+-- Work ---------------" \
-          +Gmail/INBOX \
-          +Gmail/Call\ log \
-          +Gmail/[Google\ Mail].All\ Mail \
-          +Gmail/[Google\ Mail].Sent\ Mail \
-          +Gmail/[Google\ Mail].Starred \
-         "+-- Gmail2 ---------------" \
-          +Gmail2/INBOX \+Gmail2/Ebay \
-          +Gmail2/[Google\ Mail].All\ Mail \
-          +Gmail2/[Google\ Mail].Sent\ Mail \
-          +Gmail2/[Google\ Mail].Starred \
-
-# Other special folders
-# set mbox      = "+codeprole/archive"
-# set postponed = "+codeprole/drafts"
-
 # }}}
 # Index View Options {{{ 
 set date_format = %m.%d.%y"
@@ -147,8 +126,6 @@ macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
 # Change Folders
-macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.mutt/accounts/Gmail<enter><change-folder>!<enter>'
-macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.mutt/accounts/Gmail2<enter><change-folder>!<enter>'
 macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
 
 
@@ -160,9 +137,9 @@ macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
 
 # ctrl-n, ctrl-p to select next, prev folder
 # ctrl-o to open selected folder
-bind index,pager \CP sidebar-prev
-bind index,pager \CN sidebar-next
-bind index,pager \CO sidebar-open
+#bind index,pager \CP sidebar-prev
+#bind index,pager \CN sidebar-next
+#bind index,pager \CO sidebar-open
 
 macro index B '<enter-command>toggle sidebar_visible<enter><refresh>'
 macro pager B '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
@@ -198,7 +175,7 @@ macro pager \Cu "|urlview<enter>" "call urlview to open links"
 
 # }}}
 # Compose View Options {{{ 
-set realname = ""                    # who am I?
+set realname = "Ajibola Okubanjo"                    # who am I?
 set envelope_from                                # which from?
 set sig_dashes                                   # dashes before sig
 set edit_headers                                 # show headers when composing
@@ -225,7 +202,8 @@ bind index p recall-message
 
 # GPG
 source ~/.mutt/gpg
-set pgp_sign_as = D030634B
+set pgp_sign_as = 
+set pgp_use_gpg_agent = yes
 set pgp_replyencrypt = yes
 set pgp_timeout = 1800
 set pgp_autoinline=yes
@@ -244,17 +222,10 @@ bind pager N search-opposite
 macro index a "<limit>all\n" "show all messages (undo limit)"
 # }}}
 
-
-
-
-
-
 #--------
-## notmuch
-##--------
-## 'L' performs a notmuch query, showing only the results
+# notmuch
+#--------
+# 'L' performs a notmuch query, showing only the results
 macro index <esc>s "<enter-command>unset wait_key<enter><shell-escape>read -p 'notmuch query: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;chomp@a;s/\^id:// for@a;$,=\"|\";print@a'\`\"<enter>" "show only messages matching a notmuch pattern"
-## 'a' shows all messages again (supersedes default <alias> binding)
-macro index <esc>a "<limit>all\n" "show all messages (undo limit)"#--------
-
-
+# 'a' shows all messages again (supersedes default <alias> binding)
+macro index <esc>a "<limit>all\n" "show all messages (undo limit)"

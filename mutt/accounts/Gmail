@@ -6,10 +6,10 @@ set sendmail  = "/usr/bin/msmtp -a Gmail"
 set spoolfile = "+Gmail/INBOX"
 set postponed   = "+Gmail/[Google Mail].Drafts"
 set record 		= "+Gmail/Sent\ Items"
-set trash       = "+Gmail/[Google Mail].Bin"
+#set trash       = "+Gmail/[Google Mail].Bin"
 set copy        = no
 unset record
-set pgp_sign_as=0xD030634B
+set pgp_sign_as=
 set pgp_autosign=no
 set pgp_replyencrypt=yes
 set pgp_replysign=yes 

@@ -17,12 +17,6 @@ ln -s ${BASEDIR}/dunstrc $HOME/.config/dunstrc
 # feh
 ln -s ${BASEDIR}/fehbg $HOME/.fehbg
 
-# git
-#ln -s ${BASEDIR}/gitconfig $HOME/.gitconfig
-
-# goobook
-ln -s ${BASEDIR}/goobookrc $HOME/.goobookrc
-
 # nano
 ln -s ${BASEDIR}/nanorc $HOME/.nanorc
 
@@ -41,8 +35,8 @@ ln -s ${BASEDIR}/bin $HOME/bin
 # colors
 ln -s ${BASEDIR}/colors $HOME/.colors
 
-# filezilla
-#ln -s ${BASEDIR}/filezilla $HOME/.config/filezilla
+# dropbox-cli
+ln -s ${BASEDIR}/dropbox-cli $HOME/dropbox-cli
 
 # fontconfig
 ln -s ${BASEDIR}/fontconfig $HOME/.config/fontconfig
@@ -52,9 +46,6 @@ ln -s ${BASEDIR}/todo $HOME/.todo
 
 # fonts
 ln -s ${BASEDIR}/fonts $HOME/.fonts
-
-# gnupg
-#ln -s ${BASEDIR}/gnupg $HOME/.gnupg
 
 # i3
 ln -s ${BASEDIR}/i3 $HOME/.i3
@@ -73,7 +64,6 @@ ln -s ${BASEDIR}/mplayer $HOME/.mplayer
 
 # msmtp
 ln -s ${BASEDIR}/msmtprc $HOME/.msmtprc
-ln -s ${BASEDIR}/msmtp-gmail.gpg $HOME/.msmtp-gmail.gpg
 
 # mutt
 ln -s ${BASEDIR}/mutt $HOME/.mutt
@@ -85,17 +75,8 @@ ln -s ${BASEDIR}/ncmpcpp $HOME/.ncmpcpp
 ln -s ${BASEDIR}/offlineimap.py $HOME/.offlineimap.py
 ln -s ${BASEDIR}/offlineimaprc $HOME/.offlineimaprc
 
-# pass
-#ln -s ${BASEDIR}/pass $HOME/.password-store
-
-# private
-#ln -s ${BASEDIR}/private $HOME/.private
-
 # ranger
-#ln -s ${BASEDIR}/ranger $HOME/.config/ranger
-
-# ssh
-#ln -s ${BASEDIR}/ssh $HOME/.ssh
+ln -s ${BASEDIR}/ranger $HOME/.config/ranger
 
 # todo.txt
 ln -s ${BASEDIR}/todo $HOME/.todo
@@ -103,9 +84,6 @@ ln -s ${BASEDIR}/todo $HOME/.todo
 # vim
 ln -s ${BASEDIR}/vimrc $HOME/.vimrc
 ln -s ${BASEDIR}/vim/ $HOME/.vim
-
-# weechat
-ln -s ${BASEDIR}/weechat $HOME/.weechat
 
 # wl
 ln -s ${BASEDIR}/wl $HOME/.wl

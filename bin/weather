@@ -1,5 +1,5 @@
 # !/usr/bin/bash
-# Conky example: #${color1}${execi 300 /home/ajibola/Bin/weather "EUR|UK|UK001|LONDON"}
+# Conky example: #${color1}${execi 300 /home/ajibola/bin/weather "EUR|UK"}
 
 METRIC=1 #Should be 0 or 1; 0 for F, 1 for C
 if [ -z $1 ]; then

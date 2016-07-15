@@ -2,7 +2,7 @@
 #AccuWeather (r) RSS weather tool for conky
 #
 #USAGE: weather.sh <locationcode>
-# Conky example: #${color1}${execi 300 /home/ajibola/Bin/weather "EUR|UK|UK001|LONDON"}
+# Conky example: #${color1}${execi 300 /home/ajibola/bin/weather "EUR|UK|UK001|LONDON"}
 #
 #(c) Michael Seiler 2007
 

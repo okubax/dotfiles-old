@@ -100,6 +100,8 @@ alias cowu="cower -u"			# find aur updates
 ## BATTERY INFO
 alias bat="upower --show-info /org/freedesktop/UPower/devices/battery_BAT0"
 alias batr="upower --show-info /org/freedesktop/UPower/devices/battery_BAT0 | grep "time""
+alias bat1="upower --show-info /org/freedesktop/UPower/devices/battery_BAT1"
+alias batr1="upower --show-info /org/freedesktop/UPower/devices/battery_BAT1 | grep "time""
 
 # '[r]emove [o]rphans' - recursively remove ALL orphaned packages
 alias pacro="/usr/bin/pacman -Qtdq > /dev/null && sudo /usr/bin/pacman -Rs \$(/usr/bin/pacman -Qtdq | sed -e ':a;N;$!ba;s/\n/ /g')"
@@ -177,6 +179,13 @@ alias start="sudo systemctl start"
 alias stop="sudo systemctl stop"
 alias status="systemctl status"
 
+# google calender (gcalcli)
+alias calm="gcalcli calm"
+alias calw="gcalcli calw"
+alias cald="gcalcli agenda"
+alias calquick="gcalcli quick --calendar ''"
+alias caladd="gcalcli add --calendar ''"
+
 # httpd & mysqld
 #alias starth="sudo systemctl start httpd"
 #alias startm="sudo systemctl start mysqld"
@@ -194,11 +203,13 @@ alias diskact="sudo iotop -Po"
 export USE_CCACHE=1
 
 # todo
-source todo_completion
-
+source ~/bin/todo_completion
 export TODOTXT_DEFAULT_ACTION=ls
 alias t='todo.sh -d ~/.todo/todo.cfg'
 complete -F _todo t
+
+# generate random password
+alias genpass="strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 10 | tr -d '\n'; echo"
 
 #cups
 alias startprint="systemctl start org.cups.cupsd.service"
@@ -210,8 +221,8 @@ getlog() { local file=~/logs/system/log-$(date +%Y%m%d-%H:%M).txt; sudo journalc
 #export commands
 export PATH=${PATH}:~/bin
 export PATH=${PATH}:~/.local/bin/
-export PATH=${PATH}:~/downloads/android-dev/android-sdk-linux/tools
-export PATH=${PATH}:~/downloads/android-dev/android-sdk-linux/platform-tools/
+export PATH=${PATH}:~/downloads/android-dev/android-sdk/tools
+export PATH=${PATH}:~/downloads/android-dev/android-sdk/platform-tools/
 export PATH=$PATH:$HOME/.composer/vendor/bin
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export EDITOR="vim"
