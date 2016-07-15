@@ -7,7 +7,7 @@
 	./dots.sh
 	
 	
-wallpaper is made in <a href="http://www.gimp.org/">GIMP</a>
+wallpaper created in <a href="http://www.gimp.org/">GIMP</a>
 
 
 ## Screenshot
