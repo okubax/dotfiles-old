@@ -1,5 +1,5 @@
 [general]
-accounts = Gmail
+accounts = Gmail,Outlook,Yahoo
 maxsyncaccounts = 7
 pythonfile = ~/.offlineimap.py
 
@@ -17,7 +17,7 @@ localfolders = ~/mail/Gmail
 [Repository Gmail-Remote]
 type = IMAP
 remotehost = imap.gmail.com
-remoteuser = you @ gmail.com
+remoteuser = you@gmail.com
 remotepasseval = get_pass("Gmail")
 ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
@@ -26,6 +26,55 @@ createfolders = False
 realdelete = no
 holdconnectionopen = true
                                
+                                             
+[Account Outlook]
+status_backend = sqlite
+localrepository = Outlook-Local
+remoterepository = Outlook-Remote
+autorefresh = 30
+quick = 3
+
+[Repository Outlook-Local]
+type = Maildir
+localfolders = ~/mail/Outlook
+
+[Repository Outlook-Remote]
+remotehost = imap-mail.outlook.com
+remoteuser = you@live.com
+remotepasseval = get_pass("Outlook")
+type = IMAP
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+holdconnectionopen = true
+keepalive = 120
+createfolders = False
+realdelete = yes
+
+
+
+[Account Yahoo]
+status_backend = sqlite
+localrepository = Yahoo-Local
+remoterepository = Yahoo-Remote
+autorefresh = 60
+quick = 4
+
+[Repository Yahoo-Local]
+type = Maildir
+localfolders = ~/mail/Yahoo
+
+[Repository Yahoo-Remote]
+remotehost = imap.mail.yahoo.com
+remoteuser = you@yahoo.co.uk
+remotepasseval = get_pass("Yahoo")
+type = IMAP
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+holdconnectionopen = true
+keepalive = 120
+createfolders = False
+realdelete = yes
+
 [mbnames]
 enabled = yes
 filename = ~/.mutt/mailboxes

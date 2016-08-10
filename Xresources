@@ -1,5 +1,4 @@
 ! Xresources Configuration
-! 15 Sep 2015
 ! vim: set xft=xdefaults:
 
 ! XFT - Fonts
@@ -12,7 +11,6 @@ Xft.autohint: 0
 Xft.lcdfilter: lcddefault
 Xft.hinting: 1
 Xft.hintstyle: hintfull
-!Xft.hintstyle:  hintslight
 
 ! Colors
 !----------------------------------------------------------------------
@@ -37,16 +35,8 @@ URxvt.borderless: false
 URxvt.internalBorder: 3
 URxvt.externalBorder: 3
 URxvt.scrollBar: false
-#URxvt.font: xft:terminus:pixelsize=11:antialias=false
-#URxvt.boldFont: xft:terminus:bold:pixelsize=11:antialias=false
-
 URxvt.font: xft:Tewi:pixelsize=12:antialias=true
 URxvt.boldFont: xft:Tewi:pixelsize=12:antialias=true
-
-! transparency
-!URxvt.transparent: true
-!URxvt.tintColor: #101010
-!URxvt.shading: 4
 
 ! clickable urls
 URxvt.perl-ext-common: default,matcher,selection-to-clipboard

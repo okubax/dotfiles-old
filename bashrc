@@ -148,11 +148,6 @@ alias clipb="anamnesis -b"
 #xclip
 alias clipboard='xclip -o'
 
-# powerline
-#if [ -f /usr/lib/python3.5/site-packages/powerline/bindings/bash/powerline.sh ]; then
-#    source /usr/lib/python3.5/site-packages/powerline/bindings/bash/powerline.sh
-#fi
-
 # disk space
 alias diskfree="df -ht ext4"
 
@@ -183,14 +178,8 @@ alias status="systemctl status"
 alias calm="gcalcli calm"
 alias calw="gcalcli calw"
 alias cald="gcalcli agenda"
-alias calquick="gcalcli quick --calendar ''"
-alias caladd="gcalcli add --calendar ''"
-
-# httpd & mysqld
-#alias starth="sudo systemctl start httpd"
-#alias startm="sudo systemctl start mysqld"
-#alias stoph="sudo systemctl stop httpd"
-#alias stopm="sudo systemctl stop mysqld"
+alias calquick="gcalcli quick --calendar 'your_google_calender_name'"
+alias caladd="gcalcli add --calendar 'your_google_calender_name'"
 
 # xampp
 alias starth="sudo /opt/lampp/lampp start"
@@ -221,8 +210,8 @@ getlog() { local file=~/logs/system/log-$(date +%Y%m%d-%H:%M).txt; sudo journalc
 #export commands
 export PATH=${PATH}:~/bin
 export PATH=${PATH}:~/.local/bin/
-export PATH=${PATH}:~/downloads/android-dev/android-sdk/tools
-export PATH=${PATH}:~/downloads/android-dev/android-sdk/platform-tools/
+export PATH=${PATH}:~/downloads/android-dev/android-sdk-linux/tools
+export PATH=${PATH}:~/downloads/android-dev/android-sdk-linux/platform-tools/
 export PATH=$PATH:$HOME/.composer/vendor/bin
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export EDITOR="vim"

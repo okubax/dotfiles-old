@@ -95,6 +95,15 @@ hdr_order from: to: cc: date: subject: # and in this order
 # Default inbox.
 set spoolfile = "+Gmail/INBOX"
 
+# Set account specific options on folder change
+folder-hook Gmail/*		source ~/.mutt/accounts/Gmail
+folder-hook Outlook/*	source ~/.mutt/accounts/Outlook
+folder-hook Yahoo/*		source ~/.mutt/accounts/Yahoo
+
+# Other special folders
+# set mbox      = "+codeprole/archive"
+# set postponed = "+codeprole/drafts"
+
 # }}}
 # Index View Options {{{ 
 set date_format = %m.%d.%y"
@@ -126,6 +135,9 @@ macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
 # Change Folders
+macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.mutt/accounts/Gmail<enter><change-folder>!<enter>'
+macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.mutt/accounts/Outlook<enter><change-folder>!<enter>'
+macro index,pager <f4> '<sync-mailbox><enter-command>source ~/.mutt/accounts/Yahoo<enter><change-folder>!<enter>'
 macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
 
 
@@ -175,7 +187,7 @@ macro pager \Cu "|urlview<enter>" "call urlview to open links"
 
 # }}}
 # Compose View Options {{{ 
-set realname = "Ajibola Okubanjo"                    # who am I?
+set realname = "Your Name"                    # who am I?
 set envelope_from                                # which from?
 set sig_dashes                                   # dashes before sig
 set edit_headers                                 # show headers when composing
@@ -202,7 +214,7 @@ bind index p recall-message
 
 # GPG
 source ~/.mutt/gpg
-set pgp_sign_as = 
+set pgp_sign_as = Your_PGP_ID
 set pgp_use_gpg_agent = yes
 set pgp_replyencrypt = yes
 set pgp_timeout = 1800
@@ -226,6 +238,6 @@ macro index a "<limit>all\n" "show all messages (undo limit)"
 # notmuch
 #--------
 # 'L' performs a notmuch query, showing only the results
-macro index <esc>s "<enter-command>unset wait_key<enter><shell-escape>read -p 'notmuch query: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;chomp@a;s/\^id:// for@a;$,=\"|\";print@a'\`\"<enter>" "show only messages matching a notmuch pattern"
+macro index L "<enter-command>unset wait_key<enter><shell-escape>read -p 'notmuch query: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;chomp@a;s/\^id:// for@a;$,=\"|\";print@a'\`\"<enter>" "show only messages matching a notmuch pattern"
 # 'a' shows all messages again (supersedes default <alias> binding)
-macro index <esc>a "<limit>all\n" "show all messages (undo limit)"
+macro index a "<limit>all\n" "show all messages (undo limit)"    

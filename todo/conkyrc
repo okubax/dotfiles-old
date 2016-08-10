@@ -4,7 +4,7 @@ conky.config = {
     border_width = 5,
     double_buffer = true,
     font = 'Tewi:size=9',
-    gap_x = 17,
+    gap_x = 35,
     gap_y = 45,
     minimum_height = 5,
     minimum_width = 5,

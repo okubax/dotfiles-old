@@ -17,11 +17,14 @@ ln -s ${BASEDIR}/dunstrc $HOME/.config/dunstrc
 # feh
 ln -s ${BASEDIR}/fehbg $HOME/.fehbg
 
+# goobook
+ln -s ${BASEDIR}/goobookrc $HOME/.goobookrc
+
 # nano
 ln -s ${BASEDIR}/nanorc $HOME/.nanorc
 
 # urlview
-ln -s ${BASEDIR}/fehbg $HOME/.urlview
+ln -s ${BASEDIR}/urlview $HOME/.urlview
 
 # xinitrc
 ln -s ${BASEDIR}/xinitrc $HOME/.xinitrc
@@ -36,7 +39,7 @@ ln -s ${BASEDIR}/bin $HOME/bin
 ln -s ${BASEDIR}/colors $HOME/.colors
 
 # dropbox-cli
-ln -s ${BASEDIR}/dropbox-cli $HOME/dropbox-cli
+ln -s ${BASEDIR}/dropbox-cli $HOME/.dropbox-cli
 
 # fontconfig
 ln -s ${BASEDIR}/fontconfig $HOME/.config/fontconfig
@@ -75,6 +78,12 @@ ln -s ${BASEDIR}/ncmpcpp $HOME/.ncmpcpp
 ln -s ${BASEDIR}/offlineimap.py $HOME/.offlineimap.py
 ln -s ${BASEDIR}/offlineimaprc $HOME/.offlineimaprc
 
+# pass
+ln -s ${BASEDIR}/pass $HOME/.password-store
+
+# private
+ln -s ${BASEDIR}/private $HOME/.private
+
 # ranger
 ln -s ${BASEDIR}/ranger $HOME/.config/ranger
 
@@ -84,6 +93,9 @@ ln -s ${BASEDIR}/todo $HOME/.todo
 # vim
 ln -s ${BASEDIR}/vimrc $HOME/.vimrc
 ln -s ${BASEDIR}/vim/ $HOME/.vim
+
+# weechat
+ln -s ${BASEDIR}/weechat $HOME/.weechat
 
 # wl
 ln -s ${BASEDIR}/wl $HOME/.wl

@@ -1,6 +1,6 @@
 # i3 config file
 
-# June 26 2016 - okubax https://okubax.co.uk
+# August 2016 - okubax https://okubax.co.uk
 
 
 
@@ -17,9 +17,8 @@ new_window pixel 3
 focus_follows_mouse  yes
 
 # gaps
-gaps inner 7
-gaps outer 0
-
+gaps inner 20
+gaps outer 2
 
 # Hybrid colors (solarized)
 set $black	#002B36
@@ -54,9 +53,12 @@ set $mod Mod4
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# HANDLE POPUPS
+popup_during_fullscreen smart
+
 # take screenshot
-bindsym Print exec $HOME/bin/screen.sh root
-bindsym Mod1+Print exec $HOME/bin/screen.sh active
+bindsym Print exec $HOME/bin/screen root
+bindsym Mod1+Print exec $HOME/bin/screen active
 
 # key bindings
 bindsym $MOD+Return exec --no-startup-id urxvt
@@ -192,7 +194,6 @@ bindsym $mod+3 workspace $WS3
 bindsym $mod+4 workspace $WS4
 bindsym $mod+5 workspace $WS5
 bindsym $mod+6 workspace $WS6
-
 bindsym $mod+7 workspace $WS7
 bindsym $mod+8 workspace $WS8
 bindsym $mod+9 workspace $WS9
@@ -254,28 +255,6 @@ bar {
         urgent_workspace  	$orange		$orange		$dark
     }
 }
-
-# HANDLE POPUPS
-#popup_during_fullscreen smart
-
-
-
-# Create Log out, Reboot, Poweroff bindings
-#set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-#mode "$mode_system" {
-#    bindsym l exec --no-startup-id $HOME/bin/i3exit lock, mode "default"
-#    bindsym e exec --no-startup-id $HOME/bin/i3exit logout, mode "default"
-#    bindsym s exec --no-startup-id $HOME/bin/i3exit suspend, mode "default"
-#    bindsym h exec --no-startup-id $HOME/bin/i3exit hibernate, mode "default"
-#    bindsym r exec --no-startup-id $HOME/bin/i3exit reboot, mode "default"
-#    bindsym Shift+s exec --no-startup-id $HOME/bin/i3exit shutdown, mode "default"
-
-    # back to normal: Enter or Escape
-#    bindsym Return mode "default"
-#    bindsym Escape mode "default"
-#}
-#bindsym $mod+Shift+Q mode "$mode_system"
-
 
 # autostart
 exec --no-startup-id sh ~/.fehbg
