@@ -5,7 +5,7 @@ My dotfiles for:
 * bash
 * compton
 * dunst
-* i3 + conkybar
+* i3-gaps + conkybar
 * irssi
 * mpd
 * mutt
