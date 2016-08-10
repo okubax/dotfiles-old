@@ -23,4 +23,4 @@ My dotfiles for:
 	
 ## Screenshot
 
-![ScreenShot](/screenshot.png)
+![ScreenShot](https://raw.githubusercontent.com/okubax/dotfiles/master/screenshot.png)
