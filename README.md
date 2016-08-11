@@ -8,9 +8,8 @@ My dotfiles for:
 * i3-gaps + conkybar
 * irssi
 * mpd
-* mutt
+* mutt + offlineimap + msmtp + notmuch
 * ncmpcpp
-* offlineimap + msmtp + notmuch
 * vim
 * weechat
 * misc. useful & not-so-useful scripts
