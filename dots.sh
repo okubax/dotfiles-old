@@ -41,9 +41,6 @@ ln -s ${BASEDIR}/colors $HOME/.colors
 # dropbox-cli
 ln -s ${BASEDIR}/dropbox-cli $HOME/.dropbox-cli
 
-# fontconfig
-ln -s ${BASEDIR}/fontconfig $HOME/.config/fontconfig
-
 # todo
 ln -s ${BASEDIR}/todo $HOME/.todo
 
