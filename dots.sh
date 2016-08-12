@@ -41,8 +41,8 @@ ln -s ${BASEDIR}/colors $HOME/.colors
 # dropbox-cli
 ln -s ${BASEDIR}/dropbox-cli $HOME/.dropbox-cli
 
-# todo
-ln -s ${BASEDIR}/todo $HOME/.todo
+# fontconfig
+ln -s ${BASEDIR}/fontconfig $HOME/.config/fontconfig
 
 # fonts
 ln -s ${BASEDIR}/fonts $HOME/.fonts
@@ -84,7 +84,7 @@ ln -s ${BASEDIR}/private $HOME/.private
 # ranger
 ln -s ${BASEDIR}/ranger $HOME/.config/ranger
 
-# todo.txt
+# todo
 ln -s ${BASEDIR}/todo $HOME/.todo
 
 # vim
