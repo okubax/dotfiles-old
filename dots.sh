@@ -78,9 +78,6 @@ ln -s ${BASEDIR}/offlineimaprc $HOME/.offlineimaprc
 # pass
 ln -s ${BASEDIR}/pass $HOME/.password-store
 
-# private
-ln -s ${BASEDIR}/private $HOME/.private
-
 # ranger
 ln -s ${BASEDIR}/ranger $HOME/.config/ranger
 

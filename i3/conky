@@ -15,7 +15,7 @@ TEXT
 [
   ${if_mpd_playing}{ "full_text" : "♬ ${mpd_artist} - ${mpd_title}", "color" : "\#a6a6a6"},${endif}  
   
-  {"full_text": " ${execpi 60 ~/bin/gmail.sh}", "color":"\#a6a6a6"},\
+  {"full_text": " ${execpi 60 ~/bin/gmail}", "color":"\#a6a6a6"},\
  
   ${if_up enp4s0}{ "full_text" : " ${addr enp4s0} \u2193${downspeedf enp5s0}k \u2191${upspeedf enp4s0}k", "color" : "\#a6a6a6"},
   ${else}
